@@ -33,20 +33,25 @@
             // 
             // pipeControl1
             // 
-            this.pipeControl1.IsOpen = false;
-            this.pipeControl1.Location = new System.Drawing.Point(121, 27);
+            this.pipeControl1.Location = new System.Drawing.Point(182, 42);
+            this.pipeControl1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.pipeControl1.Name = "pipeControl1";
-            this.pipeControl1.Size = new System.Drawing.Size(604, 327);
+            this.pipeControl1.PipeName = "Steam Line";
+            this.pipeControl1.Pressure = 9.8D;
+            this.pipeControl1.Size = new System.Drawing.Size(906, 503);
             this.pipeControl1.TabIndex = 0;
+            this.pipeControl1.Temperature = 185.4D;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.pipeControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
