@@ -87,12 +87,15 @@ namespace ScadaControlsLibrary.Communication
 
         /// <summary>
         /// PLC'den bool tipinde veri okur.
+        /// Şimdilik test amacıyla sabit değer döndürmektedir.
         /// Gerçek haberleşme kodu daha sonra eklenecektir.
         /// </summary>
         public static bool ReadBool(string tagName)
         {
-            throw new NotImplementedException();
+            return false;
         }
+
+
 
         /// <summary>
         /// PLC'den float tipinde veri okur.
@@ -100,29 +103,35 @@ namespace ScadaControlsLibrary.Communication
         /// </summary>
         public static float ReadFloat(string tagName)
         {
-            throw new NotImplementedException();
+            return 0.0f;
         }
+
+
 
         /// <summary>
         /// PLC'den int tipinde veri okur.
         /// Gerçek haberleşme kodu daha sonra eklenecektir.
+        /// Şimdilik test amacıyla sabit değer döndürmektedir.
         /// </summary>
         public static int ReadInt(string tagName)
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         #endregion
+
+
 
         #region Writing
 
         /// <summary>
         /// PLC'ye veri yazar.
+        /// Şimdilik test amacıyla başarılı kabul edilmektedir.
         /// Gerçek haberleşme kodu daha sonra eklenecektir.
         /// </summary>
         public static bool Write(string tagName, object value)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         #endregion
