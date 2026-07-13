@@ -17,7 +17,8 @@ namespace ScadaControlsLibrary
         private ToolTip pipeToolTip = new ToolTip();
         private bool _alarm = false;
         private Timer refreshTimer = new Timer();
-
+        private bool _autoRefresh = false;
+        private int _refreshInterval = 500;
 
         // PLC Tag bilgileri
         private string _isOpenTag = "";
@@ -31,7 +32,7 @@ namespace ScadaControlsLibrary
             InitializeComponent();
 
             // Timer ayarları
-            refreshTimer.Interval = 500;
+            refreshTimer.Interval = RefreshInterval;
             refreshTimer.Tick += RefreshTimer_Tick;
 
             RefreshPipe();
@@ -206,6 +207,43 @@ namespace ScadaControlsLibrary
             get
             {
                 return _alarm;
+            }
+        }
+
+        [Category("PLC")]
+        [Description("PLC'den otomatik veri okunmasını sağlar.")]
+        [DefaultValue(false)]
+        public bool AutoRefresh
+        {
+            get
+            {
+                return _autoRefresh;
+            }
+            set
+            {
+                _autoRefresh = value;
+
+                if (_autoRefresh)
+                    refreshTimer.Start();
+                else
+                    refreshTimer.Stop();
+            }
+        }
+
+
+        [Category("PLC")]
+        [Description("PLC veri okuma aralığı (ms).")]
+        [DefaultValue(500)]
+        public int RefreshInterval
+        {
+            get
+            {
+                return _refreshInterval;
+            }
+            set
+            {
+                _refreshInterval = value;
+                refreshTimer.Interval = value;
             }
         }
 
