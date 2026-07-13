@@ -251,6 +251,24 @@ namespace ScadaControlsLibrary
 
 
 
+        /// <summary>
+        /// PLC'den PipeControl'e ait değerleri okur.
+        /// </summary>
+        private void ReadPlcValues()
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
         // PictureBox'a tıklanınca çalışacak metot
         //  private void PicturePipe_Click(object sender, EventArgs e)
         //{
