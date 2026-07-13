@@ -268,20 +268,17 @@ namespace ScadaControlsLibrary
                 return;
 
             // Açık/Kapalı bilgisini oku
+            // IsOpen = PlcClient.ReadBool(IsOpenTag);
 
             // Sıcaklık bilgisini oku
+            // Temperature = PlcClient.ReadFloat(TemperatureTag);
 
             // Basınç bilgisini oku
+            // Pressure = PlcClient.ReadFloat(PressureTag);
 
             // Görseli güncelle
+            // RefreshPipe();
         }
-
-
-
-
-
-
-
 
 
 
