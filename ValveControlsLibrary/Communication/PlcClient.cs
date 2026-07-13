@@ -40,8 +40,18 @@ namespace ScadaControlsLibrary.Communication
         /// </summary>
         public static bool Connect()
         {
-            _isConnected = true;
-            return _isConnected;
+            try
+            {
+                // PLC bağlantısı ileride burada kurulacak.
+
+                _isConnected = true;
+                return true;
+            }
+            catch
+            {
+                _isConnected = false;
+                return false;
+            }
         }
 
         /// <summary>
@@ -49,7 +59,15 @@ namespace ScadaControlsLibrary.Communication
         /// </summary>
         public static void Disconnect()
         {
-            _isConnected = false;
+            try
+            {
+                // PLC bağlantısı ileride burada kapatılacak.
+
+                _isConnected = false;
+            }
+            catch
+            {
+            }
         }
 
         /// <summary>
