@@ -16,6 +16,12 @@ namespace ScadaControlsLibrary
         private ToolTip pipeToolTip = new ToolTip();
         private bool _alarm = false;
 
+        // PLC Tag bilgileri
+        private string _isOpenTag = "";
+        private string _pipeEnabledTag = "";
+        private string _temperatureTag = "";
+        private string _pressureTag = "";
+
         public PipeControl()
         {
             InitializeComponent();
@@ -105,6 +111,73 @@ namespace ScadaControlsLibrary
                 RefreshPipe();
             }
         }
+
+
+
+        //sonradan plc için ekledim
+        [Category("PLC")]
+        [Description("PLC BOOL değişken adresi.")]
+        [DefaultValue("")]
+        public string IsOpenTag                        //PLC değişkenleri isimle okunduğu için string
+        {
+            get
+            {
+                return _isOpenTag;
+            }
+            set
+            {
+                _isOpenTag = value;
+            }
+        }
+
+
+        [Category("PLC")]
+        [Description("PLC BOOL değişken adresi.")]
+        [DefaultValue("")]
+        public string PipeEnabledTag
+        {
+            get
+            {
+                return _pipeEnabledTag;
+            }
+            set
+            {
+                _pipeEnabledTag = value;
+            }
+        }
+
+
+        [Category("PLC")]
+        [Description("PLC REAL değişken adresi.")]
+        [DefaultValue("")]
+        public string TemperatureTag
+        {
+            get
+            {
+                return _temperatureTag;
+            }
+            set
+            {
+                _temperatureTag = value;
+            }
+        }
+
+        [Category("PLC")]
+        [Description("PLC REAL değişken adresi.")]
+        [DefaultValue("")]
+        public string PressureTag
+        {
+            get
+            {
+                return _pressureTag;
+            }
+            set
+            {
+                _pressureTag = value;
+            }
+        }
+//buraya kadar
+
 
 
 

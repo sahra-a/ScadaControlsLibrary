@@ -1,4 +1,4 @@
-﻿namespace ScadaControlsTest
+﻿namespace test4
 {
     partial class Form1
     {
@@ -33,25 +33,20 @@
             // 
             // pipeControl1
             // 
-            this.pipeControl1.Location = new System.Drawing.Point(182, 42);
-            this.pipeControl1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.pipeControl1.Location = new System.Drawing.Point(45, 78);
+            this.pipeControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pipeControl1.Name = "pipeControl1";
-            this.pipeControl1.PipeName = "Steam Line";
-            this.pipeControl1.Pressure = 7.9D;
-            this.pipeControl1.Size = new System.Drawing.Size(906, 503);
+            this.pipeControl1.Size = new System.Drawing.Size(1035, 449);
             this.pipeControl1.TabIndex = 0;
-            this.pipeControl1.Temperature = 398.9D;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1112, 683);
             this.Controls.Add(this.pipeControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

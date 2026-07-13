@@ -1,4 +1,4 @@
-﻿namespace ScadaControlsTest
+﻿namespace test2
 {
     partial class Form1
     {
@@ -28,36 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.pipeControl1 = new ScadaControlsLibrary.PipeControl();
             this.SuspendLayout();
             // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Location = new System.Drawing.Point(671, 155);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(80, 26);
+            this.hScrollBar1.TabIndex = 0;
+            // 
             // pipeControl1
             // 
-            this.pipeControl1.Location = new System.Drawing.Point(182, 42);
-            this.pipeControl1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.pipeControl1.Location = new System.Drawing.Point(59, -70);
+            this.pipeControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pipeControl1.Name = "pipeControl1";
-            this.pipeControl1.PipeName = "Steam Line";
-            this.pipeControl1.Pressure = 7.9D;
-            this.pipeControl1.Size = new System.Drawing.Size(906, 503);
-            this.pipeControl1.TabIndex = 0;
-            this.pipeControl1.Temperature = 398.9D;
+            this.pipeControl1.Size = new System.Drawing.Size(1200, 692);
+            this.pipeControl1.TabIndex = 1;
+            this.pipeControl1.Load += new System.EventHandler(this.pipeControl1_Load);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pipeControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.hScrollBar1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.HScrollBar hScrollBar1;
         private ScadaControlsLibrary.PipeControl pipeControl1;
     }
 }

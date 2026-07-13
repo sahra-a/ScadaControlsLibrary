@@ -1,4 +1,7 @@
 <Solution>
   <Project Path="ScadaControlsTest/ScadaControlsTest.csproj" Id="d86af28c-8460-44b4-bd95-b68c227934b3" />
+  <Project Path="test2/test2.csproj" Id="50a11bf3-a761-45d6-8c1b-2f1e5e4664f6" />
+  <Project Path="test4/test4.csproj" Id="9f813d6d-4270-4de8-8e55-cd3718f54aa4" />
+  <Project Path="test7/test7.csproj" Id="74807adb-3a2f-43c6-924b-f6d6ba1df67a" />
   <Project Path="ValveControlsLibrary/ScadaControlsLibrary.csproj" Id="3537e232-1004-4200-a140-fbed8074eb62" />
 </Solution>
