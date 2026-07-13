@@ -31,6 +31,7 @@ namespace ScadaControlsLibrary
         {
             InitializeComponent();
 
+
             // Timer ayarları
             refreshTimer.Interval = RefreshInterval;
             refreshTimer.Tick += RefreshTimer_Tick;
@@ -192,11 +193,7 @@ namespace ScadaControlsLibrary
 
 
 
-        //kullanıcı karar verecek.
-        [Category("PLC")]
-        [Description("PLC'den otomatik veri okunmasını sağlar.")]
-        [DefaultValue(false)]
-        public bool AutoRefresh { get; set; } = false;
+       
 
 
 
@@ -324,8 +321,7 @@ namespace ScadaControlsLibrary
             // Basınç bilgisini oku
              Pressure = PlcClient.ReadFloat(PressureTag);
 
-            // Görseli güncelle
-            // RefreshPipe();
+            
         }
 
 
@@ -349,5 +345,10 @@ namespace ScadaControlsLibrary
         {
             ReadPlcValues();
         }
+
+
+       
+
+
     }
 }

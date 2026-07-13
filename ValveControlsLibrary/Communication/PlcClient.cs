@@ -26,6 +26,12 @@ namespace ScadaControlsLibrary.Communication
         /// </summary>
         public static void InitCommunication(string amsNetId, int port)
         {
+            if (string.IsNullOrWhiteSpace(amsNetId))
+                throw new ArgumentException("AMS Net ID cannot be empty.", nameof(amsNetId));
+
+            if (port <= 0)
+                throw new ArgumentOutOfRangeException(nameof(port));
+
             _amsNetId = amsNetId;
             _port = port;
         }
@@ -40,6 +46,10 @@ namespace ScadaControlsLibrary.Communication
         /// </summary>
         public static bool Connect()
         {
+            // Zaten bağlıysa tekrar bağlanma.
+            if (_isConnected)
+                return true;
+
             try
             {
                 // PLC bağlantısı ileride burada kurulacak.
@@ -59,6 +69,10 @@ namespace ScadaControlsLibrary.Communication
         /// </summary>
         public static void Disconnect()
         {
+            // Zaten bağlantı yoksa işlem yapma.
+            if (!_isConnected)
+                return;
+
             try
             {
                 // PLC bağlantısı ileride burada kapatılacak.
@@ -69,6 +83,10 @@ namespace ScadaControlsLibrary.Communication
             {
             }
         }
+
+
+
+
 
         /// <summary>
         /// PLC bağlantı durumunu döndürür.
