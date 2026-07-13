@@ -82,5 +82,49 @@ namespace ScadaControlsLibrary.Communication
         }
 
         #endregion
+
+        #region Reading
+
+        /// <summary>
+        /// PLC'den bool tipinde veri okur.
+        /// Gerçek haberleşme kodu daha sonra eklenecektir.
+        /// </summary>
+        public static bool ReadBool(string tagName)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// PLC'den float tipinde veri okur.
+        /// Gerçek haberleşme kodu daha sonra eklenecektir.
+        /// </summary>
+        public static float ReadFloat(string tagName)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// PLC'den int tipinde veri okur.
+        /// Gerçek haberleşme kodu daha sonra eklenecektir.
+        /// </summary>
+        public static int ReadInt(string tagName)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Writing
+
+        /// <summary>
+        /// PLC'ye veri yazar.
+        /// Gerçek haberleşme kodu daha sonra eklenecektir.
+        /// </summary>
+        public static bool Write(string tagName, object value)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }
