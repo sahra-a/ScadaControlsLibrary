@@ -177,8 +177,15 @@ namespace ScadaControlsLibrary
                 _pressureTag = value;
             }
         }
-//buraya kadar
+        //buraya kadar
 
+
+
+        //kullanıcı karar verecek.
+        [Category("PLC")]
+        [Description("PLC'den otomatik veri okunmasını sağlar.")]
+        [DefaultValue(false)]
+        public bool AutoRefresh { get; set; } = false;
 
 
 
