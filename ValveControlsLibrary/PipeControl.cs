@@ -16,6 +16,8 @@ namespace ScadaControlsLibrary
         private double _pressure = 0;
         private ToolTip pipeToolTip = new ToolTip();
         private bool _alarm = false;
+        private Timer refreshTimer = new Timer();
+
 
         // PLC Tag bilgileri
         private string _isOpenTag = "";
@@ -23,14 +25,22 @@ namespace ScadaControlsLibrary
         private string _temperatureTag = "";
         private string _pressureTag = "";
 
+
         public PipeControl()
         {
             InitializeComponent();
+
+            // Timer ayarları
+            refreshTimer.Interval = 500;
+            refreshTimer.Tick += RefreshTimer_Tick;
+
             RefreshPipe();
 
             // PictureBox'a tıklanınca bu metot çalışacak
             picturePipe.Click += PicturePipe_Click;
         }
+
+
 
         // Özellik kategorisi düzenli görünecek
         [Category("Appearance")]
@@ -295,6 +305,11 @@ namespace ScadaControlsLibrary
                 return;
 
             IsOpen = !IsOpen;
+        }
+
+        private void RefreshTimer_Tick(object sender, EventArgs e)
+        {
+            ReadPlcValues();
         }
     }
 }
