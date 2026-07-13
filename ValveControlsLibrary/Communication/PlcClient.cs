@@ -110,6 +110,9 @@ namespace ScadaControlsLibrary.Communication
         /// </summary>
         public static bool ReadBool(string tagName)
         {
+            if (string.IsNullOrWhiteSpace(tagName))
+                throw new ArgumentException("Tag name cannot be empty.", nameof(tagName));
+
             return false;
         }
 
@@ -118,9 +121,13 @@ namespace ScadaControlsLibrary.Communication
         /// <summary>
         /// PLC'den float tipinde veri okur.
         /// Gerçek haberleşme kodu daha sonra eklenecektir.
+        /// Şimdilik test amacıyla sabit değer döndürmektedir.
         /// </summary>
         public static float ReadFloat(string tagName)
         {
+            if (string.IsNullOrWhiteSpace(tagName))
+                throw new ArgumentException("Tag name cannot be empty.", nameof(tagName));
+
             return 0.0f;
         }
 
@@ -128,11 +135,13 @@ namespace ScadaControlsLibrary.Communication
 
         /// <summary>
         /// PLC'den int tipinde veri okur.
-        /// Gerçek haberleşme kodu daha sonra eklenecektir.
         /// Şimdilik test amacıyla sabit değer döndürmektedir.
         /// </summary>
         public static int ReadInt(string tagName)
         {
+            if (string.IsNullOrWhiteSpace(tagName))
+                throw new ArgumentException("Tag name cannot be empty.", nameof(tagName));
+
             return 0;
         }
 
@@ -145,10 +154,12 @@ namespace ScadaControlsLibrary.Communication
         /// <summary>
         /// PLC'ye veri yazar.
         /// Şimdilik test amacıyla başarılı kabul edilmektedir.
-        /// Gerçek haberleşme kodu daha sonra eklenecektir.
         /// </summary>
         public static bool Write(string tagName, object value)
         {
+            if (string.IsNullOrWhiteSpace(tagName))
+                throw new ArgumentException("Tag name cannot be empty.", nameof(tagName));
+
             return true;
         }
 
