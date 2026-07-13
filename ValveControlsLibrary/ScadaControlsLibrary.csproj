@@ -55,12 +55,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="DigitalSensorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalSensorControl.Designer.cs">
+      <DependentUpon>DigitalSensorControl.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DigitalSensorControl.resx">
+      <DependentUpon>DigitalSensorControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PipeControl.resx">
       <DependentUpon>PipeControl.cs</DependentUpon>
     </EmbeddedResource>

@@ -63,6 +63,26 @@ namespace ValveControlsLibrary {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DigitalSensor_Off {
+            get {
+                object obj = ResourceManager.GetObject("DigitalSensor_Off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DigitalSensor_On {
+            get {
+                object obj = ResourceManager.GetObject("DigitalSensor_On", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pipe_Close {
             get {
                 object obj = ResourceManager.GetObject("Pipe_Close", resourceCulture);
