@@ -57,7 +57,9 @@
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PipeControl.resx">
       <DependentUpon>PipeControl.cs</DependentUpon>
