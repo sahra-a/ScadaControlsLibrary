@@ -5,6 +5,14 @@ using System.Drawing;
 using System.Windows.Forms;
 using ValveControlsLibrary;
 
+public enum PipeStyle
+{
+    Classic,
+    Industrial
+}
+
+
+
 namespace ScadaControlsLibrary
 {
     public partial class PipeControl : UserControl
@@ -19,6 +27,8 @@ namespace ScadaControlsLibrary
         private Timer refreshTimer = new Timer();
         private bool _autoRefresh = false;
         private int _refreshInterval = 500;
+        private PipeStyle _style = PipeStyle.Classic;
+
 
         // PLC Tag bilgileri
         private string _isOpenTag = "";
@@ -189,11 +199,29 @@ namespace ScadaControlsLibrary
                 _pressureTag = value;
             }
         }
+
+
+        [Category("Appearance")]
+        [Description("Pipe görünümünü seçer.")]
+        [DefaultValue(PipeStyle.Classic)]
+        public PipeStyle Style
+        {
+            get
+            {
+                return _style;
+            }
+            set
+            {
+                _style = value;
+                RefreshPipe();
+            }
+        }
+
         //buraya kadar
 
 
 
-       
+
 
 
 
@@ -265,13 +293,19 @@ namespace ScadaControlsLibrary
         private void RefreshPipe()
         {
             // Borunun durumuna göre uygun resmi göster
-            if (_isOpen)
+            if (Style == PipeStyle.Classic)
             {
-                picturePipe.Image = Resources.Pipe_Open;
+                if (IsOpen)
+                    picturePipe.Image = Resources.Pipe_Open;
+                else
+                    picturePipe.Image = Resources.Pipe_Close;
             }
             else
             {
-                picturePipe.Image = Resources.Pipe_Close;
+                if (IsOpen)
+                    picturePipe.Image = Resources.Pipe2_Open;
+                else
+                    picturePipe.Image = Resources.Pipe2_Close;
             }
 
             // Alarm kontrolünü sonradan ekledim.

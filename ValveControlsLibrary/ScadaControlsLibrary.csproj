@@ -67,6 +67,12 @@
     <Compile Include="DigitalSensorControl.Designer.cs">
       <DependentUpon>DigitalSensorControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CounterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CounterControl.Designer.cs">
+      <DependentUpon>CounterControl.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +81,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AnalogSensorControl.resx">
       <DependentUpon>AnalogSensorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterControl.resx">
+      <DependentUpon>CounterControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DigitalSensorControl.resx">
       <DependentUpon>DigitalSensorControl.cs</DependentUpon>

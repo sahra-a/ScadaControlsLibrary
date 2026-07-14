@@ -25,6 +25,8 @@ namespace ScadaControlsTest
             digitalSensorControl1.Value = true;
             analogSensorControl1.SensorName = "PT-101";
             analogSensorControl1.Value = 12.5f;
+            counterControl1.CounterName = "Water Meter";
+            counterControl1.Count = 123;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +42,11 @@ namespace ScadaControlsTest
         private void button2_Click(object sender, EventArgs e)
         {
             analogSensorControl1.Value = 78.4f;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            counterControl1.Count = 987654;
         }
     }
 }
