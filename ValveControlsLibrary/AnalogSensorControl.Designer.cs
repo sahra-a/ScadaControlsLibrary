@@ -38,9 +38,10 @@
             // 
             // pictureSensor
             // 
-            this.pictureSensor.Location = new System.Drawing.Point(431, 178);
+            this.pictureSensor.Image = global::ValveControlsLibrary.Resources.analog_sensör;
+            this.pictureSensor.Location = new System.Drawing.Point(443, 156);
             this.pictureSensor.Name = "pictureSensor";
-            this.pictureSensor.Size = new System.Drawing.Size(492, 340);
+            this.pictureSensor.Size = new System.Drawing.Size(409, 361);
             this.pictureSensor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureSensor.TabIndex = 0;
             this.pictureSensor.TabStop = false;
@@ -48,7 +49,7 @@
             // lblSensorNameTitle
             // 
             this.lblSensorNameTitle.AutoSize = true;
-            this.lblSensorNameTitle.Location = new System.Drawing.Point(663, 207);
+            this.lblSensorNameTitle.Location = new System.Drawing.Point(456, 177);
             this.lblSensorNameTitle.Name = "lblSensorNameTitle";
             this.lblSensorNameTitle.Size = new System.Drawing.Size(114, 20);
             this.lblSensorNameTitle.TabIndex = 1;
@@ -58,7 +59,7 @@
             // lblSensorName
             // 
             this.lblSensorName.AutoSize = true;
-            this.lblSensorName.Location = new System.Drawing.Point(783, 207);
+            this.lblSensorName.Location = new System.Drawing.Point(576, 177);
             this.lblSensorName.Name = "lblSensorName";
             this.lblSensorName.Size = new System.Drawing.Size(114, 20);
             this.lblSensorName.TabIndex = 2;
@@ -68,20 +69,22 @@
             // lblValueTitle
             // 
             this.lblValueTitle.AutoSize = true;
-            this.lblValueTitle.Location = new System.Drawing.Point(693, 244);
+            this.lblValueTitle.Location = new System.Drawing.Point(456, 449);
             this.lblValueTitle.Name = "lblValueTitle";
             this.lblValueTitle.Size = new System.Drawing.Size(58, 20);
             this.lblValueTitle.TabIndex = 3;
             this.lblValueTitle.Text = "Value :";
+            this.lblValueTitle.Click += new System.EventHandler(this.lblValueTitle_Click);
             // 
             // lblValue
             // 
             this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(766, 244);
+            this.lblValue.Location = new System.Drawing.Point(530, 449);
             this.lblValue.Name = "lblValue";
             this.lblValue.Size = new System.Drawing.Size(31, 20);
             this.lblValue.TabIndex = 4;
             this.lblValue.Text = "0.0";
+            this.lblValue.Click += new System.EventHandler(this.lblValue_Click);
             // 
             // AnalogSensorControl
             // 

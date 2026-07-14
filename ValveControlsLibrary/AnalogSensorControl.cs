@@ -172,5 +172,14 @@ namespace ValveControlsLibrary
             ReadPlcValues();
         }
 
+        private void lblValueTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblValue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

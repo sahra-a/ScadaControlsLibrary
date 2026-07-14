@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ValveControlsLibrary;
 
 namespace ScadaControlsTest
 {
@@ -19,9 +20,11 @@ namespace ScadaControlsTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //silinebilir sadece deneme amaçlı 2 satır
+            //silinebilir sadece deneme amaçlı 4 satır
             digitalSensorControl1.SensorName = "LS-101";
             digitalSensorControl1.Value = true;
+            analogSensorControl1.SensorName = "PT-101";
+            analogSensorControl1.Value = 12.5f;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,6 +35,11 @@ namespace ScadaControlsTest
         private void digitalSensorControl1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            analogSensorControl1.Value = 78.4f;
         }
     }
 }
