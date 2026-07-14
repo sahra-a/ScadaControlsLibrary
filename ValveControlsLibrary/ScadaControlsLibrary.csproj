@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalogSensorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalogSensorControl.Designer.cs">
+      <DependentUpon>AnalogSensorControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Communication\PlcClient.cs" />
     <Compile Include="PipeControl.cs">
       <SubType>UserControl</SubType>
@@ -67,6 +73,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AnalogSensorControl.resx">
+      <DependentUpon>AnalogSensorControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DigitalSensorControl.resx">
       <DependentUpon>DigitalSensorControl.cs</DependentUpon>
     </EmbeddedResource>

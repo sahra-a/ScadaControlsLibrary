@@ -19,6 +19,18 @@ namespace ScadaControlsTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //silinebilir sadece deneme amaçlı 2 satır
+            digitalSensorControl1.SensorName = "LS-101";
+            digitalSensorControl1.Value = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            digitalSensorControl1.Value = !digitalSensorControl1.Value;
+        }
+
+        private void digitalSensorControl1_Load(object sender, EventArgs e)
+        {
 
         }
     }
